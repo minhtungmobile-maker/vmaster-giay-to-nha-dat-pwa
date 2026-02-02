@@ -1,32 +1,140 @@
 ﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>V MASTER - Giấy tờ Nhà đất</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V MASTER – Dịch vụ Giấy tờ Nhà đất</title>
+
+  <!-- SEO + Trust -->
+  <meta name="description" content="V MASTER – Dịch vụ pháp lý nhà đất uy tín, minh bạch, đúng pháp luật. Hỗ trợ sang tên, chuyển nhượng, công chứng, giải quyết tranh chấp." />
+  <meta name="theme-color" content="#0b3c5d" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon/icon-192.png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-  <header>
-    <h1>V MASTER - Giấy tờ Nhà đất</h1>
-    <nav>
+
+<header class="header">
+  <div class="container header-flex">
+    <div class="logo">V MASTER</div>
+    <nav class="nav">
+      <a href="index.html">Trang chủ</a>
       <a href="pages/dich-vu.html">Dịch vụ</a>
       <a href="pages/quy-trinh.html">Quy trình</a>
       <a href="pages/bang-gia.html">Bảng giá</a>
-      <a href="pages/tiep-nhan-ho-so.html">Tiếp nhận hồ sơ</a>
-      <a href="pages/lien-he.html">Liên hệ</a>
+      <a href="pages/tiep-nhan-ho-so.html" class="btn-primary">Gửi hồ sơ</a>
     </nav>
-  </header>
-  <main>
-    <p>Chào mừng đến với nền tảng pháp lý tin cậy – hỗ trợ giấy tờ nhà đất nhanh chóng, minh bạch.</p>
-  </main>
-  <script src="js/main.js"></script>
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("service-worker.js")
-        .then(() => console.log("Service Worker registered"))
-        .catch(err => console.error("SW registration failed:", err));
-    }
-  </script>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Dịch vụ pháp lý nhà đất <span>uy tín – minh bạch – đúng luật</span></h1>
+      <p>
+        V MASTER hỗ trợ trọn gói hồ sơ nhà đất: sang tên, chuyển nhượng, công chứng,
+        giải quyết tranh chấp theo đúng quy định pháp luật Việt Nam.
+      </p>
+      <div class="hero-cta">
+        <a href="pages/tiep-nhan-ho-so.html" class="btn-primary">Gửi hồ sơ ngay</a>
+        <a href="pages/lien-he.html" class="btn-outline">Nhận tư vấn miễn phí</a>
+      </div>
+    </div>
+    <div class="hero-box">
+      <ul>
+        <li>✔ Không chi phí ẩn</li>
+        <li>✔ Minh bạch quy trình</li>
+        <li>✔ Bảo mật hồ sơ</li>
+        <li>✔ Hỗ trợ đến khi hoàn tất</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="container">
+    <h2>Dịch vụ pháp lý nhà đất</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Tư vấn pháp luật đất đai</h3>
+        <p>Giải đáp, hướng dẫn thủ tục theo Luật Đất đai và Luật Nhà ở.</p>
+        <a href="pages/tiep-nhan-ho-so.html" class="btn-small">Nhận tư vấn</a>
+      </div>
+
+      <div class="card">
+        <h3>Sang tên – chuyển nhượng</h3>
+        <p>Thực hiện hồ sơ sang tên nhanh chóng, đúng quy định.</p>
+        <a href="pages/tiep-nhan-ho-so.html" class="btn-small">Gửi hồ sơ</a>
+      </div>
+
+      <div class="card">
+        <h3>Công chứng hồ sơ</h3>
+        <p>Hỗ trợ công chứng, chứng thực minh bạch theo biểu phí.</p>
+        <a href="pages/tiep-nhan-ho-so.html" class="btn-small">Gửi hồ sơ</a>
+      </div>
+
+      <div class="card">
+        <h3>Giải quyết tranh chấp</h3>
+        <p>Tư vấn và hỗ trợ xử lý tranh chấp đất đai đúng pháp luật.</p>
+        <a href="pages/tiep-nhan-ho-so.html" class="btn-small">Nhận tư vấn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section section-alt">
+  <div class="container">
+    <h2>Quy trình làm việc minh bạch</h2>
+
+    <div class="process">
+      <div class="step">1. Tiếp nhận hồ sơ</div>
+      <div class="step">2. Kiểm tra pháp lý</div>
+      <div class="step">3. Thực hiện thủ tục</div>
+      <div class="step">4. Bàn giao kết quả</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="section">
+  <div class="container trust">
+    <h2>Cam kết của V MASTER</h2>
+    <ul>
+      <li>Thực hiện đúng quy định pháp luật</li>
+      <li>Không hứa hẹn sai sự thật</li>
+      <li>Bảo mật tuyệt đối thông tin khách hàng</li>
+      <li>Đồng hành đến khi hồ sơ hoàn tất</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Bạn cần hỗ trợ hồ sơ nhà đất?</h2>
+    <p>Gửi thông tin ngay – chúng tôi sẽ liên hệ và tư vấn miễn phí.</p>
+    <a href="pages/tiep-nhan-ho-so.html" class="btn-primary btn-large">
+      Gửi hồ sơ ngay
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 V MASTER – Dịch vụ Giấy tờ Nhà đất</p>
+    <p>Hoạt động theo quy định pháp luật Việt Nam</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,119 +1,177 @@
-﻿/* Reset cơ bản */
+﻿:root {
+  --primary: #0b3c5d;
+  --accent: #c0392b;
+  --bg: #f4f6f8;
+  --text: #333;
+}
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-/* Toàn bộ trang */
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f5f6fa;
-  color: #2f3640;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  background: var(--bg);
   line-height: 1.6;
-  font-size: 16px; /* chuẩn mobile */
+  font-size: 16px;
 }
 
-/* Header */
-header {
-  background-color: #0a3d62;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Navigation */
-nav {
-  margin-top: 0.5rem;
-}
-
-nav a {
-  color: white;
-  margin: 0 10px;
+a {
   text-decoration: none;
-  font-weight: 500;
+  color: inherit;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px;
+}
+
+/* HEADER */
+.header {
+  background: var(--primary);
+  color: #fff;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav a {
+  margin-left: 16px;
+  color: #fff;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+}
+
+.btn-small {
+  background: var(--primary);
+  color: #fff;
   padding: 8px 12px;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  font-size: 14px;
 }
 
-nav a:hover,
-nav a:focus {
-  background-color: #3c6382;
+.btn-large {
+  font-size: 18px;
+  padding: 14px 24px;
 }
 
-/* Main content */
-main {
-  padding: 1.5rem;
+/* HERO */
+.hero {
+  background: #fff;
+  padding: 48px 0;
 }
 
-/* Nút bấm */
-button {
-  padding: 12px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: none;
-  background-color: #0a3d62;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+.hero-grid {
+  display: grid;
+  gap: 24px;
 }
 
-button:hover {
-  background-color: #3c6382;
+.hero h1 span {
+  color: var(--primary);
 }
 
-button:active {
-  background-color: #1e3799;
-  transform: scale(0.98);
-}
-
-/* Form */
-form {
-  max-width: 500px;
-  margin: 1rem auto;
-  background: #ffffff;
-  padding: 1rem;
-  border: 1px solid #dcdde1;
+.hero-box {
+  background: var(--bg);
+  padding: 24px;
   border-radius: 8px;
 }
 
-form label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 0.3rem;
+/* SECTIONS */
+.section {
+  padding: 48px 0;
 }
 
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 1rem;
-  border: 1px solid #dcdde1;
-  border-radius: 4px;
-  font-size: 1rem;
+.section-alt {
+  background: #fff;
 }
 
-/* Responsive cho tablet/desktop */
+.cards {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* PROCESS */
+.process {
+  display: grid;
+  gap: 12px;
+}
+
+.step {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+/* TRUST */
+.trust ul {
+  list-style: none;
+  padding: 0;
+}
+
+.trust li::before {
+  content: "✔ ";
+  color: var(--accent);
+}
+
+/* CTA */
+.cta {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 48px 16px;
+}
+
+/* FOOTER */
+.footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+/* RESPONSIVE */
 @media (min-width: 768px) {
-  body {
-    font-size: 18px; /* chữ lớn hơn */
+  .hero-grid {
+    grid-template-columns: 2fr 1fr;
   }
 
-  header h1 {
-    font-size: 2rem;
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  nav a {
-    font-size: 1rem;
-  }
-
-  main {
-    padding: 2rem 3rem;
+  .process {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
