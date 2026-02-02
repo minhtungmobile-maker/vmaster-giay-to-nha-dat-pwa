@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>V MASTER - Giấy tờ Nhà đất</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>V MASTER - Giấy tờ Nhà đất</h1>
+    <nav>
+      <a href="pages/dich-vu.html">Dịch vụ</a>
+      <a href="pages/quy-trinh.html">Quy trình</a>
+      <a href="pages/bang-gia.html">Bảng giá</a>
+      <a href="pages/tiep-nhan-ho-so.html">Tiếp nhận hồ sơ</a>
+      <a href="pages/lien-he.html">Liên hệ</a>
+    </nav>
+  </header>
+  <main>
+    <p>Chào mừng đến với nền tảng pháp lý tin cậy – hỗ trợ giấy tờ nhà đất nhanh chóng, minh bạch.</p>
+  </main>
+  <script src="js/main.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("Service Worker registered"))
+        .catch(err => console.error("SW registration failed:", err));
+    }
+  </script>
+</body>
+</html>
