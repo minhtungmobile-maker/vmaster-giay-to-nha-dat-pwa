@@ -1,18 +1,19 @@
 ﻿{
-  "name": "V MASTER - Giấy tờ Nhà đất",
-  "short_name": "VMaster",
-  "start_url": "index.html",
+  "name": "V MASTER – Dịch vụ Giấy tờ Nhà đất",
+  "short_name": "V MASTER",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#0a3d62",
+  "theme_color": "#0f2a44",
+  "description": "Dịch vụ giấy tờ nhà đất minh bạch – đúng pháp luật – xử lý trọn gói. Chuẩn V MASTER.",
   "icons": [
     {
-      "src": "icon/icon-192.png",
+      "src": "/icon/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icon/icon-512.png",
+      "src": "/icon/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
