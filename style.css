@@ -1,211 +1,78 @@
 ﻿/* =========================
-   RESET + NỀN TẢNG CHUẨN
+   PAGE TIẾP NHẬN HỒ SƠ – MOBILE FIRST
    ========================= */
-:root {
-  --primary: #0f2a44;   /* xanh navy pháp lý */
-  --accent: #c62828;    /* đỏ CTA */
-  --bg: #ffffff;
-  --text: #1a1a1a;
-  --border: #dddddd;
+
+.form-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px;
 }
 
-* {
-  box-sizing: border-box;
+.page-title {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
-html {
-  font-size: 16px; /* Mobile-first */
+.page-title span {
+  color: #0b4f6c; /* xanh pháp lý */
 }
 
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Arial, sans-serif;
+.page-desc {
+  font-size: 0.95rem;
   line-height: 1.6;
-  color: var(--text);
-  background: var(--bg);
+  color: #4b5563;
+  margin-bottom: 20px;
 }
 
 /* =========================
-   LAYOUT CHUNG
+   FORM – NGÓN TAY NGƯỜI LỚN TUỔI
    ========================= */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 1rem;
-}
 
-/* =========================
-   TYPOGRAPHY
-   ========================= */
-h1 {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
-}
-
-h2 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-
-h3 {
-  font-size: 1.15rem;
-  margin-bottom: 0.4rem;
-}
-
-p {
+.legal-form input,
+.legal-form textarea,
+.legal-form select {
+  width: 100%;
+  padding: 14px 12px;
   font-size: 1rem;
-  margin-bottom: 0.6rem;
-}
-
-/* =========================
-   HEADER
-   ========================= */
-.header {
-  background: var(--primary);
-  color: #fff;
-  text-align: center;
-  padding: 1.2rem 0;
-}
-
-/* =========================
-   HERO
-   ========================= */
-.hero {
-  background: #f4f6f8;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.hero h2 {
-  line-height: 1.4;
-}
-
-/* =========================
-   BUTTON
-   ========================= */
-.btn-primary,
-.btn-secondary {
-  display: inline-block;
-  padding: 0.8rem 1.4rem;
-  margin-top: 0.8rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  min-height: 44px; /* chuẩn UX */
-}
-
-.btn-primary {
-  background: var(--accent);
-  color: #fff;
-}
-
-.btn-secondary {
-  background: var(--primary);
-  color: #fff;
-}
-
-/* =========================
-   CARD / SERVICE
-   ========================= */
-.grid-4 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-.card {
-  border: 1px solid var(--border);
-  padding: 1rem;
+  margin-bottom: 14px;
   border-radius: 8px;
-  background: #fff;
-  font-size: 1rem;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #cbd5e1;
 }
 
-/* =========================
-   FORM – TRANG TIẾP NHẬN HỒ SƠ
-   ========================= */
-form {
-  max-width: 600px;
-  margin: auto;
-}
-
-label {
+.legal-form label {
   display: block;
+  font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 6px;
-  font-size: 1rem;
 }
 
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  margin-bottom: 1rem;
-}
-
-textarea {
+.legal-form textarea {
   min-height: 120px;
 }
 
-button {
+.legal-form button {
   width: 100%;
-  padding: 12px;
+  padding: 16px;
   font-size: 1rem;
-  font-weight: 600;
-  background: var(--accent);
+  font-weight: 700;
+  background: #c0392b; /* đỏ CTA */
   color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 /* =========================
-   LIST / PROCESS
+   MEDIA QUERY – KHÓA CỨNG MOBILE
    ========================= */
-ol,
-ul {
-  padding-left: 1.2rem;
-  font-size: 1rem;
-}
 
-/* =========================
-   FOOTER
-   ========================= */
-.footer {
-  background: #f0f0f0;
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 1rem;
-}
-
-/* =========================
-   NÂNG CẤP TABLET / LAPTOP
-   ========================= */
-@media (min-width: 768px) {
-  html {
-    font-size: 17px;
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
   }
 
-  h1 {
-    font-size: 1.9rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .grid-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  button {
-    width: auto;
+  .page-title {
+    font-size: 1.35rem;
   }
 }
